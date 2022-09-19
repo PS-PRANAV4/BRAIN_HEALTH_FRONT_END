@@ -1,0 +1,108 @@
+<div class="pt-7 flex flex-col-reverse md:flex-row md:pl-3" >
+  <div class="flex flex-col  justify-center md:w-1/2">
+    <div class="flex justify-center md:justify-start  md:ml-14"  style="font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px; color: #257069; text-transform: uppercase;">
+      be the light
+    </div>
+    <div class="md:text-left md:ml-14  flex justify-center" style="font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    
+    color: #257069; text-transform: uppercase;"> 
+   
+      Happiness can be found even in the darkest of times, if one only remembers to turn on the light.
+    
+     
+    </div>
+  </div>
+  <div class=" md:w-1/2">
+    <img src="http://127.0.0.1:8000/media/photos/cover/therpi_Y95Wb11.jpg" alt="">
+  </div>
+</div>
+
+
+<div class="flex justify-center pt-7" style="font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 25px;
+line-height: 29px;
+
+color: #000000; text-transform: uppercase; color: #257069;"> we are here for them guide them treat them</div>
+
+
+
+<section id="services" class="pb-14">
+  <div class="max-w-6xl px-5 mx-auto mt-32 text-center">
+    <h1 class="" style="color: #257069;">SERVICES</h1>
+    <div class="flex flex-col mt-5 md:flex-row md:space-x-6">
+      
+      <div (click)="toggleModal()" class="flex flex-col item-center mt-5 p-6 space-y-6 rounded-lg md:w-1/4 bg-veryLightGray" style="background: #FFFFFF;
+      box-shadow: 3px 5px 25px -5px rgba(0, 0, 0, 0.25);
+      border-radius: 5px; cursor: pointer;">
+      <div class="flex justify-center" >
+        <img src="http://127.0.0.1:8000/media/photos/icon/icons8-organization-chart-people-100.png" class="w-16 " alt="">
+      </div>
+      
+        <h3 class="text-lg bold-5">
+          CREATE GROUPS
+        </h3>
+       
+       
+      </div>
+
+
+
+      <div class="flex flex-col mt-5 item-center p-6 space-y-6 rounded-lg md:w-1/4 bg-veryLightGray" style="background: #FFFFFF;
+      box-shadow: 3px 5px 25px -5px rgba(0, 0, 0, 0.25);
+      border-radius: 5px;">
+      <div class="flex justify-center" >
+          <img src="http://127.0.0.1:8000/media/photos/icon/icons8-message-67.png" class="w-16" alt="">
+      </div>
+        <h3 class="text-lg bold-5">
+          MESSAGES
+        </h3>
+        
+      </div>
+
+
+
+      <div class="flex flex-col mt-5 item-center p-6 space-y-6 rounded-lg md:w-1/4 bg-red-900" style="background: #FFFFFF;
+      box-shadow: 3px 5px 25px -5px rgba(0, 0, 0, 0.25);
+      border-radius: 5px;">
+      <div class="flex justify-center" >
+        <img src="http://127.0.0.1:8000/media/photos/icon/icons8-organization-chart-people-100_OhSPuiD.png" class="w-16" alt="">
+      </div>
+        <h3 class="text-lg bold-5">
+          DASHBOARD
+        </h3>
+       
+      </div>
+
+
+      <div class="flex flex-col mt-5 item-center p-6 space-y-6 rounded-lg md:w-1/4 bg-veryLightGray" style="background: #FFFFFF;
+      box-shadow: 3px 5px 25px -5px rgba(0, 0, 0, 0.25);
+      border-radius: 5px;">
+      <div class="flex justify-center">
+        <img src="http://127.0.0.1:8000/media/photos/icon/icons8-create-order-100.png" class="w-16" alt="">
+      </div>
+        <h3 class="text-lg bold-5">
+          NEW POST
+        </h3>
+        
+        
+      </div>
+    </div>
+  </div>
+
+
+</section>
+
+
+<app-modal *ngIf="showModal" (emitter)="event($event)"></app-modal>
+
+

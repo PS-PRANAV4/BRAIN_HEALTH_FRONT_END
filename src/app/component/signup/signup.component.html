@@ -1,0 +1,159 @@
+<div style="width: 90%;">
+    <div style="margin-top: 10%; font-size: large; font-weight: 500;  display: flex; justify-content: center;" >
+    Let's Login To Your Account!</div>
+    
+    <div style="font-size: large; font-weight: 500;  display: flex; justify-content: center;" >
+        &nbsp; &nbsp; &nbsp; already have an accound?<a routerLink="/login" style="color: #257069; text-decoration: none;">signin</a></div>
+       
+    <div fxLayoutAlign="center center"  fxFlexFill class="main-div">  <mat-button-toggle-group name="fontStyle" aria-label="Font Style"  >
+        <mat-button-toggle value="bold" style="color: #257069; text-decoration: none;" (click)="doc()" >DOCTOR</mat-button-toggle>
+        <mat-button-toggle value="italic" style="color: #257069; text-decoration: none;" (click)="client()" >Client</mat-button-toggle>
+        
+      </mat-button-toggle-group>
+      </div>
+        <div *ngIf="designations" fxLayoutAlign="center center" fxFlexFill class="main-div">
+            <mat-card fxFlex="25">
+                
+                <!-- <mat-toolbar color="primary">
+                    <span>App SIGNUP </span>
+                  </mat-toolbar> -->
+        
+                <div style="padding-top: 5%;" fxLayoutAlign="streth" fxLayout="column" class="login-form">
+                    <mat-form-field>
+                        <input matInput  [(ngModel)]="first_name" placeholder="first name" >
+                    </mat-form-field>
+
+                    <mat-form-field>
+                        <input matInput  [(ngModel)]="last_name" placeholder="last name" >
+                    </mat-form-field>
+
+
+
+
+                    <mat-form-field>
+                       <input matInput [(ngModel)]="username" placeholder="Username" >
+                    </mat-form-field>
+
+                    <mat-form-field>
+                        <input matInput  [(ngModel)]="email" placeholder="email" >
+                    </mat-form-field>
+
+                    <mat-form-field>
+                        <input matInput type="password"  [(ngModel)]="password" placeholder="Password" >
+                    </mat-form-field>
+
+                    <mat-form-field>
+                        <input matInput type="password" [(ngModel)]="confirm_password" placeholder="confirm Password" >
+                    </mat-form-field>
+                    
+                    <mat-form-field>
+                        <input matInput  [(ngModel)]="mobile_no" placeholder="mobile no" >
+                    </mat-form-field>
+
+
+                   
+                    
+
+                    
+
+                   
+
+                   
+
+                   
+
+                    <mat-form-field>
+                        <input matInput  [(ngModel)]="referal_code" placeholder="referal code" >
+                    </mat-form-field>
+                    
+                   
+
+                    <button mat-raised-button color="accent" (click)="main()" >SIGNUP</button>
+                    
+                    <mat-form-field *ngIf="check">
+                        <div style="color: #257069; text-transform: uppercase; text-decoration: none;"> {{strings}} </div>
+                     </mat-form-field>
+                </div>
+                  
+                
+            </mat-card>
+        </div>
+          
+        <div *ngIf="!designations" fxLayoutAlign="center center" fxFlexFill class="main-div">
+            <mat-card fxFlex="25">
+                
+                <!-- <mat-toolbar color="primary">
+                    <span>App SIGNUP </span>
+                  </mat-toolbar> -->
+        
+                <div style="padding-top: 5%;" fxLayoutAlign="streth" fxLayout="column" class="login-form">
+                    <mat-form-field>
+                        <input matInput  [(ngModel)]="first_name" placeholder="first name" >
+                    </mat-form-field>
+
+                    <mat-form-field>
+                        <input matInput  [(ngModel)]="last_name" placeholder="last name" >
+                    </mat-form-field>
+
+
+
+
+                    <mat-form-field>
+                       <input matInput [(ngModel)]="username" placeholder="Username" >
+                    </mat-form-field>
+
+                    <mat-form-field>
+                        <input matInput  [(ngModel)]="email" placeholder="email" >
+                    </mat-form-field>
+
+                    <mat-form-field>
+                        <input matInput type="password"  [(ngModel)]="password" placeholder="Password" >
+                    </mat-form-field>
+
+                    <mat-form-field>
+                        <input matInput type="password" [(ngModel)]="confirm_password" placeholder="confirm Password" >
+                    </mat-form-field>
+                    
+                    <mat-form-field>
+                        <input matInput  [(ngModel)]="mobile_no" placeholder="mobile no" >
+                    </mat-form-field>
+
+
+                   
+                    
+
+                    
+
+                   
+
+                   
+
+                   
+
+                    <mat-form-field>
+                        <input matInput  [(ngModel)]="referal_code" placeholder="referal code" >
+                    </mat-form-field>
+                    <!-- <mat-form-field>
+                        <input matInput  type="file" (change)="fileSelected($event)" placeholder="referal code" >
+                    </mat-form-field> -->
+                    <!-- <mat-form-field>
+                        <ngx-mat-file-input  
+                        (change)="fileSelected($event)">
+                           <mat-icon ngxMatFileInputIcon  >folder</mat-icon>
+                        </ngx-mat-file-input>
+                     </mat-form-field> -->
+<input type="file" (change)="fileSelected($event)">
+                    <button mat-raised-button color="accent" (click)="main()" >Login</button>
+                    
+                    <mat-form-field *ngIf="check">
+                        <div style="color: #257069; text-transform: uppercase; text-decoration: none;"> {{strings}} </div>
+                     </mat-form-field>
+                </div>
+                
+                
+            </mat-card>
+        </div>
+         
+    
+    </div>    
+   

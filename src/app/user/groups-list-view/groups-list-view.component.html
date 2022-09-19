@@ -1,0 +1,60 @@
+<div class="flex flex-col lg:flex-row m-14"  >
+    <div class="  lg:w-1/4 flex flex-col lg:border-r-4 lg:border-teal-500 ">
+        <div class="" >
+            <h2 class="text-teal-600">Notifications</h2>
+        </div>
+       
+        <div class="flex flex-col mt-5 item-center p-6 space-y-6 rounded-lg lg:w-3/4  bg-veryLightGray" style="background: #FFFFFF;
+      box-shadow: 3px 5px 25px -5px rgba(0, 0, 0, 0.25);
+      border-radius: 5px;">
+      <!-- <div class="flex justify-center" >
+          <img src="http://127.0.0.1:8000/media/photos/icon/icons8-message-67.png" class="w-16" alt="">
+      </div> -->
+        <h3 class="text-lg bold-5 text-teal-600">
+            Pranav commented on your post
+        </h3>
+        
+      </div>
+      <div class="flex flex-col mt-5 item-center p-6 space-y-6 rounded-lg lg:w-3/4  bg-veryLightGray" style="background: #FFFFFF;
+      box-shadow: 3px 5px 25px -5px rgba(0, 0, 0, 0.25);
+      border-radius: 5px;">
+      <!-- <div class="flex justify-center" >
+          <img src="http://127.0.0.1:8000/media/photos/icon/icons8-message-67.png" class="w-16" alt="">
+      </div> -->
+        <h3 class="text-lg bold-5 text-teal-600">
+            Pranav commented on your post
+        </h3>
+        
+      </div>
+
+    </div>
+<div  class=" lg:w-3/4 " >
+    <h1 class="lg:px-10 text-teal-600">GROUPS</h1>
+    <div *ngFor="let t of groups" class="lg:px-10" >
+        <div  (click)="GroupEnter(t.id)" class="flex flex-col mt-5 item-center p-6 space-y-6  lg:w-3/4  bg-veryLightGray"  style=" cursor: pointer; background: #FFFFFF;
+        box-shadow: 3px 5px 25px -5px rgba(0, 0, 0, 0.25);
+        border-radius: 5px;">
+        <div class="flex justify-between " >
+            <div class="flex ">
+                <img src="http://127.0.0.1:8000{{t.group_profile_pic}}" class="w-16 rounded-full" alt="">
+                <h3 class="text-lg pl-6 pt-4 bold-5 text-teal-600">
+                {{t.name}}
+                </h3>
+            </div>
+            <div class="pt-10 text-teal-600">group members 6/2</div>
+        </div>
+          
+          <h3 class="text-lg bold-5 pl-20 text-teal-600">
+            <div class="pl-2 -mt-5">
+                {{t.group_description}}
+            </div>
+            
+        </h3>
+          
+        </div>
+    </div>
+    
+
+</div>
+
+</div>

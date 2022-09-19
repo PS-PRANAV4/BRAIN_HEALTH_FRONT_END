@@ -1,0 +1,35 @@
+
+<div style="width: 90%;">
+    <div style="margin-top: 10%; font-size: large; font-weight: 500;  display: flex; justify-content: center;" >
+    Let's Login To Your Account!</div>
+    
+    <div style="font-size: large; font-weight: 500;  display: flex; justify-content: center;" >
+          &nbsp; &nbsp; &nbsp;  <div style="color: #257069; text-decoration: none;"></div> 
+       
+    
+        <div fxLayoutAlign="center center" fxFlexFill class="main-div">
+            <mat-card fxFlex="25">
+                
+                <!-- <mat-toolbar color="primary">
+                    <span>App Sign in</span>
+                  </mat-toolbar> -->
+        
+                <div fxLayoutAlign="streth" style="padding-top: 030%;" fxLayout="column" class="login-form">
+                    <mat-form-field>
+                       <input matInput [(ngModel)]="code" placeholder="Enter code here" >
+                    </mat-form-field>
+                   
+        
+                    <button mat-raised-button color="accent" (click)="main()" >Login</button>
+                </div>
+              
+                    <a routerLink="/login" >Normal Login</a>
+                
+                  
+            </mat-card>
+        </div>
+          
+          
+         
+    
+    </div>    

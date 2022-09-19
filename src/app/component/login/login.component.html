@@ -1,0 +1,36 @@
+<div style="width: 90%;">
+<div style="margin-top: 10%; font-size: large; font-weight: 500;  display: flex; justify-content: center;" >
+Let's Login To Your Account!</div>
+
+<div style="font-size: large; font-weight: 500;  display: flex; justify-content: center;" >
+      &nbsp; &nbsp; &nbsp; Don't have an account?<a routerLink="/signup" style="color: #257069; text-decoration: none;" >SIGNUP</a></div>
+   
+
+    <div fxLayoutAlign="center center" fxFlexFill class="main-div">
+        <mat-card fxFlex="25">
+            
+            <!-- <mat-toolbar color="primary">
+                <span>App Sign in</span>
+              </mat-toolbar> -->
+    
+            <div fxLayoutAlign="streth" style="padding-top: 030%;" fxLayout="column" class="login-form">
+                <mat-form-field>
+                   <input matInput [(ngModel)]="username" placeholder="Username" >
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="password" [(ngModel)]="password" placeholder="Password" >
+                </mat-form-field>
+    
+                <button mat-raised-button color="accent" (click)="main()" >Login</button>
+            </div>
+          <div>{{datas}}</div>
+                <a routerLink="/otp_login" style="padding-left: 5%; color: #257069; text-decoration: none;">Login with otp</a>
+            
+              
+        </mat-card>
+    </div>
+      
+      
+     
+
+</div>    
