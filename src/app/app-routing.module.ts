@@ -17,7 +17,7 @@ const routes: Routes = [
   {path:'otp_login',component:OtpLoginComponent},
   {path:'otp_verify',component:OtpVerfyComponent},
   {path:'group-list-view-doc',component:GroupsListViewComponent},
-  {path:'group-enter-view',component:GroupEnterViewComponent}
+  {path:'group-enter-view/:id',component:GroupEnterViewComponent}
   
 ];
 

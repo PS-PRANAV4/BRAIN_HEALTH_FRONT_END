@@ -22,7 +22,7 @@ GroupEnter(id:number)
 {
   this.login.GroupId(id)
   
-  this.route.navigate(['group-enter-view'])
+  this.route.navigate(['group-enter-view',id])
   
 }
 

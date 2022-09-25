@@ -33,6 +33,8 @@ export class LoginComponent implements OnInit {
       // localStorage.setItem('username',this.datas.username)
       localStorage.setItem('access',this.datas.access)
       localStorage.setItem('refresh',this.datas.refresh)
+      localStorage.setItem('user',this.datas.user)
+      localStorage.setItem('id',this.datas.id)
       
       
       this.toggleAddTask()
