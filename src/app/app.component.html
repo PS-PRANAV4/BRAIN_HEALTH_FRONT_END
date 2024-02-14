@@ -7,7 +7,7 @@ box-shadow:  8px 8px 40px #c7c7c7,
   <mat-toolbar-row>
     <span style="color: #257069;">Brain health</span>
     <span class="example-spacer"></span>
-    <div routerLink="/group-list-view-doc" style="color: #257069; cursor: pointer;" >Groups</div>
+    <div *ngIf="loggedIn" routerLink="/group-list-view-doc" style="color: #257069; cursor: pointer;" >Groups</div>
     <div *ngIf="!loggedIn" style="color: #257069;" class="example-icon">Login</div>
     <div (click)="logout()" *ngIf="loggedIn" style="color: #257069; cursor: pointer; " class="example-icon">Logout</div>
     
