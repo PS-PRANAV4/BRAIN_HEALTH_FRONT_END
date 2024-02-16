@@ -8,7 +8,7 @@ import { Like } from '../interfaces/interface';
   providedIn: 'root'
 })
 export class HomeService {
-  readonly APIURL:string = "https://pranavps.online/";
+  readonly APIURL:string = "https://pranavps.online";
 
   constructor(private http :HttpClient,private route:Router) { }
   Gettoken()

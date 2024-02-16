@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class LoginService {
-readonly APIURL:string = "https://pranavps.online/";
+readonly APIURL:string = "https://pranavps.online";
   constructor(private http:HttpClient,private route :Router) { }
   private subject = new Subject<boolean>();
   private sub = new Subject<string>();
