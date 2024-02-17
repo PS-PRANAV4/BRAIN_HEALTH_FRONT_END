@@ -3,12 +3,12 @@ import { HttpClient } from '@angular/common/http';
 import { Observable,Subject } from 'rxjs';
 import { Router } from '@angular/router';
 import { Like } from '../interfaces/interface';
-
+import {API} from '../login.service'
 @Injectable({
   providedIn: 'root'
 })
 export class HomeService {
-  readonly APIURL:string = "https://pranavps.online";
+  readonly APIURL:string = API;
 
   constructor(private http :HttpClient,private route:Router) { }
   Gettoken()

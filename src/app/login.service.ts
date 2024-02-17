@@ -3,11 +3,14 @@ import { HttpClient } from '@angular/common/http';
 import { Observable,Subject } from 'rxjs';
 import { Router } from '@angular/router';
 
+export const  API = "https://pranavps.online"
+
+
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
-readonly APIURL:string = "https://pranavps.online";
+readonly APIURL:string = API;
   constructor(private http:HttpClient,private route :Router) { }
   private subject = new Subject<boolean>();
   private sub = new Subject<string>();
@@ -21,7 +24,7 @@ username:string|undefined
     }
 Signup(val:any)
 {
-  return this.http.post<any[]>(this.APIURL+'/signup',val)
+  return this.http.post<any[]>(this.APIURL+'/signup', val );
 }
 Si(val:any)
 {
