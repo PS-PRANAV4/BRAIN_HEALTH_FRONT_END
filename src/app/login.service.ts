@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable,Subject } from 'rxjs';
 import { Router } from '@angular/router';
 
-export const  API = "http://pranavps.online"
+export const  API = "https://pranavps.online"
 
 
 @Injectable({
