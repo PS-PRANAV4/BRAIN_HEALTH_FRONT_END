@@ -1,0 +1,12 @@
+.container {
+    border-radius: 10px; /* Adjust the value to change the roundness */
+    background-color: #f0f0f0; /* Background color of the container */
+    padding: 20px; /* Padding to provide space inside the container */
+    width: 300px; /* Adjust the width as needed */
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1); /* Box shadow for a subtle border effect */
+}
+
+/* Style for the name section */
+.name-section {
+    margin-bottom: 10px; /* Margin to separate name section from comment section */
+}

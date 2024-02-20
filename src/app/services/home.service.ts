@@ -25,9 +25,9 @@ Logout()
 {
   localStorage.clear()
 }
-GetGroups()
+GetGroups(data:any)
 {
-  return this.http.get(this.APIURL+'/list-group')
+  return this.http.post(this.APIURL+'/list-group',data)
 }
 GetPosts(val:any):Observable<any>
 {
@@ -44,7 +44,9 @@ RemoveLike(val:Like)
 {
   return this.http.post(this.APIURL+'/post-unlike',val)
 }
-
+GetComments(id:any){
+  return this.http.post(this.APIURL+'/get-comment',id)
+}
 
 
 

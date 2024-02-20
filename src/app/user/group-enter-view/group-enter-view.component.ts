@@ -5,6 +5,7 @@ import { LoginService } from 'src/app/login.service';
 import { Observable } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
 import { Like } from 'src/app/interfaces/interface';
+import { API } from 'src/app/login.service';
 @Component({
   selector: 'app-group-enter-view',
   templateUrl: './group-enter-view.component.html',
@@ -17,6 +18,8 @@ export class GroupEnterViewComponent implements OnInit {
   posts$: Observable<any> | undefined;
   likedPerson:any
   user_id:number|undefined|string|null
+  comment_array:any = []
+  API = API
   constructor(private home:HomeService,private login:LoginService,private routes:ActivatedRoute) { 
      
    
@@ -51,28 +54,19 @@ export class GroupEnterViewComponent implements OnInit {
       this.likedPerson = data
       console.log(data);
       console.log(this.likedPerson);
+
+      for (let i of this.likedPerson)
+      {
+        this.comment_array.push(false)
+        
+      }
       
       
       
     })
     
   }
-// GetPost()
-// {
-  
-//   this.home.GetPost(this.id).subscribe(data=>{
-//     this.post_data = data
-//     console.log(this.post_data);
-//     for(let t of this.post_data)
-//     {
-//       console.log(t);
-      
-//     }
-    
-    
 
-//   })
-// }
 
 like(vas:number)
 {
@@ -102,6 +96,17 @@ console.log(this.likedPerson);
     id:vas
   }
   this.home.RemoveLike(val).subscribe()
+}
+showComment(data:number)
+{
+  if (this.comment_array[data])
+  {
+    this.comment_array[data] = false    
+  }
+  else{
+    this.comment_array[data] = true
+  }
+
 }
 
 }

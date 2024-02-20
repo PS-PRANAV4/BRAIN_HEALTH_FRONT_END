@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from 'src/app/login.service';
 import { HomeService } from 'src/app/services/home.service';
+import { API } from 'src/app/login.service';
 
 // export interface Tile {
 //   color: string;
@@ -21,6 +22,8 @@ color:string
 color1:string
 datas:any;
 showModal:boolean=false;
+show_create_group:boolean=false;
+API = API
 
   constructor(private login:LoginService,private home :HomeService) { 
     this.color = 'lightblue'
@@ -28,12 +31,10 @@ showModal:boolean=false;
   }
 
   ngOnInit(): void {
-// this.login.media().subscribe(data=>{
-//   console.log(data);
-//   this.datas = data
-  
-  
-// })
+    if (localStorage.getItem("user_type")=="DOC")
+    {
+      this.show_create_group = true
+    }
 
 
   }

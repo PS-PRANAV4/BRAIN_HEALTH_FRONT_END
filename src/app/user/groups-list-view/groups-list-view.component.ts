@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginService } from 'src/app/login.service';
+import { API, LoginService } from 'src/app/login.service';
 import { HomeService } from 'src/app/services/home.service';
 import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-groups-list-view',
   templateUrl: './groups-list-view.component.html',
@@ -10,9 +11,16 @@ import { Router } from '@angular/router';
 export class GroupsListViewComponent implements OnInit {
 groups:any 
   constructor(private home:HomeService, private login:LoginService, private route:Router) { }
-
+API = API
   ngOnInit(): void {
-    this.home.GetGroups().subscribe(data=>{
+    const data = {
+      user_type:localStorage.getItem('user_type')
+
+    }
+    
+    
+    
+    this.home.GetGroups(data).subscribe(data=>{
 this.groups = data;
 console.log(this.groups);
 

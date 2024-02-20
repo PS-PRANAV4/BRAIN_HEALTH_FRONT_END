@@ -21,8 +21,14 @@ export class ModalComponent implements OnInit {
   {
     if(this.group_name)
     {
+      console.log(this.group_members);
+      
+      const array:any = [this.group_members]
+      console.log(array);
+      
       var val = {
-        name:this.group_name
+        name:this.group_name,
+        group_members:array
         
       }
       this.home.CreateGroup(val).subscribe(data=>{

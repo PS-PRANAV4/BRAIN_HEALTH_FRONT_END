@@ -29,6 +29,9 @@ import { TokenInterceptorService } from './service/token-interceptor.service';
 import { ModalComponent } from './user/home/modal/modal.component';
 import { GroupsListViewComponent } from './user/groups-list-view/groups-list-view.component';
 import { GroupEnterViewComponent } from './user/group-enter-view/group-enter-view.component';
+import { LlComponent } from './ll/ll.component';
+import { CommentComponent } from './user/group-enter-view/comment/comment.component';
+import { SubCommentComponent } from './user/group-enter-view/comment/sub-comment/sub-comment.component';
 
 
 
@@ -42,7 +45,10 @@ import { GroupEnterViewComponent } from './user/group-enter-view/group-enter-vie
     OtpVerfyComponent,
     ModalComponent,
     GroupsListViewComponent,
-    GroupEnterViewComponent
+    GroupEnterViewComponent,
+    LlComponent,
+    CommentComponent,
+    SubCommentComponent
   ],
   imports: [
     BrowserModule,

@@ -28,13 +28,15 @@ export class LoginComponent implements OnInit {
     this.service.Login(val).subscribe(data=>{
      
       
-      console.log(data);
+      
       this.datas = data;
       // localStorage.setItem('username',this.datas.username)
       localStorage.setItem('access',this.datas.access)
       localStorage.setItem('refresh',this.datas.refresh)
       localStorage.setItem('user',this.datas.user)
       localStorage.setItem('id',this.datas.id)
+      localStorage.setItem("user_type",this.datas.user_type)
+
       
       
       this.toggleAddTask()

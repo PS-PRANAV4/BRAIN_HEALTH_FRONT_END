@@ -21,7 +21,7 @@
     </div>
   </div>
   <div class=" md:w-1/2">
-    <img src="http://127.0.0.1:8000/media/photos/cover/therpi_Y95Wb11.jpg" alt="">
+    <img src="{{API}}/media/photos/cover/therpi_Y95Wb11.jpg" alt="">
   </div>
 </div>
 
@@ -40,12 +40,12 @@ color: #000000; text-transform: uppercase; color: #257069;"> we are here for the
   <div class="max-w-6xl px-5 mx-auto mt-32 text-center">
     <h1 class="" style="color: #257069;">SERVICES</h1>
     <div class="flex flex-col mt-5 md:flex-row md:space-x-6">
-      
+      <ng-container *ngIf="show_create_group" >
       <div (click)="toggleModal()" class="flex flex-col item-center mt-5 p-6 space-y-6 rounded-lg md:w-1/4 bg-veryLightGray" style="background: #FFFFFF;
       box-shadow: 3px 5px 25px -5px rgba(0, 0, 0, 0.25);
       border-radius: 5px; cursor: pointer;">
       <div class="flex justify-center" >
-        <img src="http://127.0.0.1:8000/media/photos/icon/icons8-organization-chart-people-100.png" class="w-16 " alt="">
+        <img src="{{API}}/media/photos/icon/icons8-organization-chart-people-100.png" class="w-16 " alt="">
       </div>
       
         <h3 class="text-lg bold-5">
@@ -54,6 +54,7 @@ color: #000000; text-transform: uppercase; color: #257069;"> we are here for the
        
        
       </div>
+      </ng-container>
 
 
 
@@ -61,7 +62,7 @@ color: #000000; text-transform: uppercase; color: #257069;"> we are here for the
       box-shadow: 3px 5px 25px -5px rgba(0, 0, 0, 0.25);
       border-radius: 5px;">
       <div class="flex justify-center" >
-          <img src="http://127.0.0.1:8000/media/photos/icon/icons8-message-67.png" class="w-16" alt="">
+          <img src="{{API}}/media/photos/icon/icons8-message-67.png" class="w-16" alt="">
       </div>
         <h3 class="text-lg bold-5">
           MESSAGES
@@ -75,7 +76,7 @@ color: #000000; text-transform: uppercase; color: #257069;"> we are here for the
       box-shadow: 3px 5px 25px -5px rgba(0, 0, 0, 0.25);
       border-radius: 5px;">
       <div class="flex justify-center" >
-        <img src="http://127.0.0.1:8000/media/photos/icon/icons8-organization-chart-people-100_OhSPuiD.png" class="w-16" alt="">
+        <img src="{{API}}/media/photos/icon/icons8-organization-chart-people-100_OhSPuiD.png" class="w-16" alt="">
       </div>
         <h3 class="text-lg bold-5">
           DASHBOARD
@@ -83,12 +84,12 @@ color: #000000; text-transform: uppercase; color: #257069;"> we are here for the
        
       </div>
 
-
+<ng-container *ngIf="show_create_group">
       <div class="flex flex-col mt-5 item-center p-6 space-y-6 rounded-lg md:w-1/4 bg-veryLightGray" style="background: #FFFFFF;
       box-shadow: 3px 5px 25px -5px rgba(0, 0, 0, 0.25);
       border-radius: 5px;">
       <div class="flex justify-center">
-        <img src="http://127.0.0.1:8000/media/photos/icon/icons8-create-order-100.png" class="w-16" alt="">
+        <img src="{{API}}/media/photos/icon/icons8-create-order-100.png" class="w-16" alt="">
       </div>
         <h3 class="text-lg bold-5">
           NEW POST
@@ -96,6 +97,7 @@ color: #000000; text-transform: uppercase; color: #257069;"> we are here for the
         
         
       </div>
+    </ng-container>
     </div>
   </div>
 
